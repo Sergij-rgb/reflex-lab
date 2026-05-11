@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflex Lab | Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="xp-container"><div id="xp-bar"></div></div>
+    <div class="level-info">RANK: <span id="rank-name">RECRUIT</span> | LVL: <span id="lvl-num">1</span></div>
+
+    <nav>
+        <div class="logo">REFLEX <span>LAB</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="lab.html" class="active">Лабораторія</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+        </ul>
+    </nav>
+
+    <main class="lab-wrapper">
+        <section class="mini-lab">
+            <h3>01. Aim Trainer</h3>
+            <div style="margin: 20px 0; display: flex; gap: 15px; justify-content: center; align-items: center;">
+                <label>Швидкість (мс):</label>
+                <input type="range" id="spawn-speed" min="400" max="1500" value="800" style="width: 150px;">
+                <span id="speed-val" style="color:var(--accent)">800</span>
+                <button id="start-game" class="btn-main">СТАРТ</button>
+            </div>
+            <p>Score: <span id="score" class="neon-text">0</span> | Time: <span id="timer">30</span>s</p>
+            <div id="shooting-range" class="range"></div>
+        </section>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+            <div class="mini-lab">
+                <h3>02. Reaction</h3>
+                <div id="reaction-area" class="test-box">ГОТОВИЙ?</div>
+                <button onclick="startReaction()" class="btn-test">ПОЧАТИ</button>
+                <p id="react-result" style="margin-top:10px; color:var(--accent); font-weight:bold;"></p>
+            </div>
+            <div class="mini-lab">
+                <h3>03. Sleep</h3>
+                <input type="time" id="wake-time">
+                <button onclick="calcSleep()" class="btn-test">РОЗРАХУВАТИ</button>
+                <p id="sleep-res" style="margin-top:10px; color:var(--accent);"></p>
+            </div>
+        </div>
+
+        <section id="analysis-report" class="mini-lab hidden" style="margin-top: 40px; border: 1px solid var(--accent);">
+            <h2 class="neon-text">NEURO REPORT</h2>
+            <div id="pro-react-text" style="margin: 15px 0;"></div>
+            <div id="pro-aim-text"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

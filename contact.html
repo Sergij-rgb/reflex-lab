@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflex Lab | Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">REFLEX <span>LAB</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="lab.html">Лабораторія</a></li>
+            <li><a href="contact.html" class="active">Контакти</a></li>
+        </ul>
+    </nav>
+    <main style="display:flex; justify-content:center; align-items:center; min-height:80vh; padding: 20px;">
+        <div class="mini-lab" style="max-width:450px; width:100%;">
+            <h2 class="neon-text" style="margin-bottom: 20px;">CONTACT SUPPORT</h2>
+            <input type="text" placeholder="Твій нікнейм">
+            <input type="email" placeholder="Твій Email">
+            <select id="discipline">
+                <option value="" disabled selected>Вибери дисципліну</option>
+                <option value="cs">CS 2</option>
+                <option value="dota">Dota 2</option>
+                <option value="apex">Elden Ring</option>
+            </select>
+            <button class="btn-main" style="width:100%; margin-top:10px;" onclick="alert('Дані надіслано!')">ВІДПРАВИТИ</button>
+        </div>
+    </main>
+</body>
+</html>
